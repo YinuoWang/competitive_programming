@@ -28,7 +28,7 @@ int main() {
 	}
 	return 0;
 }
-
+    
 string reverse(string input) {
 	string answer = "";
 	for (int i = input.length() - 1; i >= 0; --i) {
