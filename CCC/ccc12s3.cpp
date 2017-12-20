@@ -64,6 +64,6 @@ int main() {
 		ans1 = abs(*biggest_vector.begin() - *bigger_vector.begin());
 		ans2 = abs(*biggest_vector.begin() - *(bigger_vector.end() - 1));
 		cout << max(ans1, ans2) << endl;
-	}
+	}	
 	return 0;
 }
