@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     int testCases;
     cin >> testCases;
-    char output[testCases];
+    vector<char>output;
     for (int i=0; i<testCases; i++){
         long N, input, count=1;
         cin >> N;
@@ -43,10 +43,10 @@ int main(){
             }
         }
         if (branch.empty()==true){
-            output[i]='Y';
+            output.push_back('Y');
         }
         else {
-            output[i]='N';
+            output.push_back('N');
         }
     }
     for (int i=0; i<testCases; i++){
