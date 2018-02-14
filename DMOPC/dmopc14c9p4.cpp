@@ -3,6 +3,7 @@
 #include <vector>
 #include <utility>
 #include <math.h>
+#include <functional>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ double dist[1001];
 int minEdge[1001];
 
 void dijkstra() {
-	priority_queue<pair<double, int>> pq;
+	priority_queue<pair<double, int>, vector<pair<double,int>>, greater<pair<double,int>>> pq;
 	for (int i = 0; i <= 1000; ++i) {
 		dist[i] = 100000000;
 		minEdge[i] = 1001;
