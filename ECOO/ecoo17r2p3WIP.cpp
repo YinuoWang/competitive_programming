@@ -15,8 +15,8 @@ bool cmp(pair<long long,int>a, pair<long long,int>b){
 }
 
 int main(){
-    while(testCases-->0){
-        long long n, m, k;
+    while(testCases--){
+        long long n, m, k, sum = 0;
         cin >> n >> m >> k;
         vector<pair<long long,int>>ratings(n);
         for (int i=0; i<n; ++i){
@@ -26,9 +26,8 @@ int main(){
             ratings[i].second = i+1;
         }
         sort(ratings.begin(), ratings.end(), cmp);
-        for (int i=1; i<=n; ++i){
-
-        }
+        
+        // 
         // change vector such that each one is within one m from each other, subtract that from k
             // think of efficient way to do this
             // need to account for when k reaches 0 inside that loop
