@@ -1,7 +1,3 @@
-from collections import defaultdict
-import sys
-input = sys.stdin.readline
-
 class UF:
     def __init__(self, N):
         self.par = list(range(N))
@@ -27,21 +23,3 @@ class UF:
 
     def connected(self, x, y):
         return self.find(x) == self.find(y)
-
-n,m = list(map(int, input().split(' ')))
-cur_count = 1
-cur_lst = []
-uf = UF(m+2)
-for i in range(n):
-    bit_lst = list(map(int, input().split(' ')))
-    bit1 = bit_lst[1]
-    bit2 = m+1
-    if bit_lst[0] == 2:
-        bit2 = bit_lst[2]
-    if uf.union(bit1, bit2):
-        cur_lst.append(str(i+1))
-        cur_count *= 2 
-        cur_count %= 10**9 + 7
-
-print(cur_count, len(cur_lst))
-print(" ".join(cur_lst))
